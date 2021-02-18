@@ -12,6 +12,8 @@
     "@types/react-dom": "^16.9.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-fetching-library": "^1.7.5",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4"
   },
   "scripts": {
@@ -20,7 +22,7 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .ts --ext .tsx --fix",
-    "precommit": "lint-staged && yarn test"
+    "precommit": "lint-staged"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,12 +54,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run precommit"
+      "pre-commit": "npm run precommit"
     }
   },
   "lint-staged": {
     "src/**/*.ts*": [
-      "yarn lint",
+      "npm run lint",
       "prettier --write"
     ]
   }
